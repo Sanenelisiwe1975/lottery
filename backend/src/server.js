@@ -62,7 +62,7 @@ app.get("/api/current-round", async (req, res) => {
 //Health check
 app.get("/health", (_req, res) => res.json({ ok: true, ts: Date.now() }));
 
-// 404 handler for undefined routes
+// 404
 app.use((_req, res) => res.status(404).json({ error: "Not found" }));
 
 //HTTP + WebSocket server
