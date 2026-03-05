@@ -1,0 +1,21 @@
+{
+  "name": "decentralized-lottery",
+  "version": "1.0.0",
+  "description": "Provably fair 7-ball lottery using Chainlink VRF",
+  "scripts": {
+    "compile":     "npx hardhat compile",
+    "test":        "npx hardhat test",
+    "deploy:sep":  "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:poly": "npx hardhat run scripts/deploy.js --network polygon",
+    "verify":      "npx hardhat verify --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0",
+    "dotenv": "^16.4.0"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^1.2.0",
+    "@openzeppelin/contracts": "^4.9.6"
+  }
+}

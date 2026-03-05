@@ -1,0 +1,120 @@
+.wrap {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin: 0 0 1rem;
+}
+
+.empty {
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 0.8rem;
+}
+.card:last-child { margin-bottom: 0; }
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.roundLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+.meta {
+  font-size: 0.73rem;
+  color: #6b7280;
+}
+
+/* Winning balls */
+.balls {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.ball {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+/* Winners list */
+.winners {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.winner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.winnerAddr {
+  font-family: monospace;
+  color: #d1d5db;
+}
+
+.winnerMatches {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.winnerPrize {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.noWinners {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.more {
+  font-size: 0.72rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.carry {
+  font-size: 0.72rem;
+  color: #fbbf24;
+  margin-top: 0.3rem;
+}

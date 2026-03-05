@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logoIcon { font-size: 1.8rem; }
+
+.logoText {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #c084fc, #f9a8d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.walletArea {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.network {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(192, 132, 252, 0.15);
+  color: #c084fc;
+  font-weight: 600;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.connectBtn {
+  padding: 0.55rem 1.4rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.connectBtn:hover { opacity: 0.85; }
+
+.addrBtn {
+  padding: 0.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  color: #d1d5db;
+  font-size: 0.85rem;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.addrBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
