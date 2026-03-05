@@ -1,7 +1,7 @@
 // Contract Addresses
 // After deploying with Hardhat, paste the printed address here for each network.
 export const CONTRACT_ADDRESSES = {
-  11155111: "0xYOUR_SEPOLIA_ADDRESS",    // Ethereum Sepolia testnet
+  11155111: "0xBe58Ef1b8877259a14250aC63f115bE2CF0537e4",    // Ethereum Sepolia testnet
   137:      "0xYOUR_POLYGON_ADDRESS",    // Polygon Mainnet
   80001:    "0xYOUR_MUMBAI_ADDRESS",     // Polygon Mumbai testnet
   31337:    "0x5FbDB2315678afecb367f032d93F642f64180aa3", // Hardhat localhost
