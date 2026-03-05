@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
-import "@chainlink/contracts/src/v0.8/vrf/interfaces/VRFCoordinatorV2Interface.sol";
+import "@chainlink/contracts/src/v0.8/vrf/dev/VRFConsumerBaseV2Plus.sol";
+import "@chainlink/contracts/src/v0.8/vrf/dev/interfaces/IVRFCoordinatorV2Plus.sol";
+import "@chainlink/contracts/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
  * @title DecentralizedLottery
@@ -44,12 +44,11 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * - Integer arithmetic in Solidity 0.8.x (built-in overflow checks).
  * - Owner has zero ability to alter draw results or prize math.
  */
-contract DecentralizedLottery is VRFConsumerBaseV2, ReentrancyGuard, Ownable {
+contract DecentralizedLottery is VRFConsumerBaseV2Plus, ReentrancyGuard {
 
     //  CHAINLINK VRF
 
-    VRFCoordinatorV2Interface private immutable i_vrfCoordinator;
-    uint64  private immutable i_subscriptionId;
+    uint256 private immutable i_subscriptionId;
     bytes32 private immutable i_gasLane;
 
     uint32  private constant CALLBACK_GAS_LIMIT    = 400_000;
@@ -168,16 +167,15 @@ contract DecentralizedLottery is VRFConsumerBaseV2, ReentrancyGuard, Ownable {
     //  CONSTRUCTOR
 
     /**
-     * @param vrfCoordinator Address of the Chainlink VRF Coordinator v2.
+     * @param vrfCoordinator Address of the Chainlink VRF Coordinator v2.5.
      * @param subscriptionId Your funded Chainlink VRF subscription ID.
      * @param gasLane        Key hash for the gas lane you want to use.
      */
     constructor(
         address vrfCoordinator,
-        uint64  subscriptionId,
+        uint256 subscriptionId,
         bytes32 gasLane
-    ) VRFConsumerBaseV2(vrfCoordinator) Ownable() {
-        i_vrfCoordinator = VRFCoordinatorV2Interface(vrfCoordinator);
+    ) VRFConsumerBaseV2Plus(vrfCoordinator) {
         i_subscriptionId = subscriptionId;
         i_gasLane        = gasLane;
         _startRound();
