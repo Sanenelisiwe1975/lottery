@@ -1,0 +1,997 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/Header.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.Header_header__MvnS2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.Header_logo__j7oID {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.Header_logoIcon__LPn5c { font-size: 1.8rem; }
+
+.Header_logoText__gtMNE {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #c084fc, #f9a8d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.Header_walletArea__jIJVh {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.Header_network__cHuxo {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(192, 132, 252, 0.15);
+  color: #c084fc;
+  font-weight: 600;
+  border: 1px solid rgba(192, 132, 252, 0.3);
+}
+
+.Header_connectBtn__oZRRw {
+  padding: 0.55rem 1.4rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.Header_connectBtn__oZRRw:hover { opacity: 0.85; }
+
+.Header_addrBtn__r1gzM {
+  padding: 0.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  color: #d1d5db;
+  font-size: 0.85rem;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.Header_addrBtn__r1gzM:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/RoundCard.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.RoundCard_card___4mpU {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+}
+
+.RoundCard_loading__Gwmgf { color: #6b7280; font-style: italic; }
+
+.RoundCard_roundBadge__2bhck {
+  display: inline-block;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  color: #a78bfa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.RoundCard_stats__D_svQ {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.RoundCard_stat__WmQ27 {
+  flex: 1 1;
+  background: rgba(255,255,255,0.05);
+  border-radius: 0.8rem;
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.RoundCard_statLabel__3Pyfk {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.RoundCard_statValue__ZXkMP {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f9fafb;
+}
+
+/* Countdown */
+.RoundCard_countdown__OpRse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.RoundCard_timeBlock__cNm_t { display: flex; flex-direction: column; align-items: center; }
+
+.RoundCard_timeNum__m3guG {
+  font-size: 2.8rem;
+  font-weight: 900;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.RoundCard_timeLabel__ydrRf {
+  font-size: 0.65rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.RoundCard_colon__jL6Pr {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+/* Draw ready */
+.RoundCard_drawReady__WAjLv { text-align: center; }
+
+.RoundCard_drawReadyText__s0mtz {
+  color: #fbbf24;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.RoundCard_triggerBtn__kO4U8 {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.RoundCard_triggerBtn__kO4U8:hover:not(:disabled) { opacity: 0.85; }
+.RoundCard_triggerBtn__kO4U8:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Awaiting Chainlink VRF */
+.RoundCard_awaitingVrf__FHTUm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.RoundCard_spinner__xyfZU {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid rgba(167,139,250,0.3);
+  border-top-color: #a78bfa;
+  border-radius: 50%;
+  animation: RoundCard_spin__A8HeQ 0.8s linear infinite;
+}
+
+@keyframes RoundCard_spin__A8HeQ { to { transform: rotate(360deg); } }
+
+.RoundCard_drawDone___neFU {
+  text-align: center;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.RoundCard_winningWrap__ljNwx {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.RoundCard_winningLabel__sKcwd {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.RoundCard_winningBalls__GFz29 {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.RoundCard_winBall__hsLF7 {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(59,130,246,0.45);
+}
+
+.RoundCard_keeperNote___Rqhh {
+  margin-top: 0.9rem;
+  font-size: 0.7rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/NumberPicker.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.NumberPicker_wrap__BGT6k {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+}
+
+.NumberPicker_header__JVhnL {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.NumberPicker_title__9yE0p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.NumberPicker_counter___z4_d {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #a78bfa;
+  background: rgba(167,139,250,0.12);
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* Ball grid */
+.NumberPicker_grid__JMyjw {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.45rem;
+  gap: 0.45rem;
+  margin-bottom: 1.2rem;
+}
+
+.NumberPicker_ball__LIHS1 {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: #d1d5db;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NumberPicker_ball__LIHS1:hover:not(:disabled) {
+  background: rgba(167,139,250,0.2);
+  border-color: #a78bfa;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.NumberPicker_ball__LIHS1.NumberPicker_active__IwB_p {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border-color: #c084fc;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+  transform: scale(1.05);
+}
+
+.NumberPicker_ball__LIHS1.NumberPicker_dimmed__GCx7_ {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.NumberPicker_ball__LIHS1:disabled {
+  cursor: not-allowed;
+}
+
+/* Selection preview */
+.NumberPicker_selection__OefIH {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 1rem;
+  background: rgba(167,139,250,0.08);
+  border-radius: 0.8rem;
+  border: 1px solid rgba(167,139,250,0.2);
+  flex-wrap: wrap;
+}
+
+.NumberPicker_selLabel__rmXjS {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.NumberPicker_selBalls__KJn8D {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.NumberPicker_selBall__yORUZ {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+}
+
+/* Action buttons*/
+.NumberPicker_actions__Cmccl {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.NumberPicker_clearBtn__A6Opp {
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: #9ca3af;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-size: 0.9rem;
+}
+.NumberPicker_clearBtn__A6Opp:hover:not(:disabled) {
+  background: rgba(255,255,255,0.08);
+  color: #d1d5db;
+}
+.NumberPicker_clearBtn__A6Opp:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.NumberPicker_buyBtn__IGVU5 {
+  flex: 1 1;
+  padding: 0.85rem 1.2rem;
+  border: none;
+  border-radius: 0.7rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.NumberPicker_buyBtn__IGVU5:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.NumberPicker_buyBtn__IGVU5:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .NumberPicker_grid__JMyjw { grid-template-columns: repeat(7, 1fr); gap: 0.3rem; }
+  .NumberPicker_ball__LIHS1 { font-size: 0.7rem; }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/ClaimPanel.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.ClaimPanel_wrap__ZYY83 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Prize box  */
+.ClaimPanel_prizeBox__0T44x {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.ClaimPanel_prizeLabel__mE1_h {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.ClaimPanel_prizeAmount__Cr581 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+.ClaimPanel_prizeAmount__Cr581.ClaimPanel_glowing__xgvOk {
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(251,191,36,0.4));
+}
+
+.ClaimPanel_claimBtn__WnJKP {
+  width: 100%;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.ClaimPanel_claimBtn__WnJKP:hover:not(:disabled) { opacity: 0.85; }
+.ClaimPanel_claimBtn__WnJKP:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Sections */
+.ClaimPanel_section__yMrp4 {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1rem;
+  padding: 1.2rem;
+}
+
+.ClaimPanel_sectionTitle__NiwuT {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin: 0 0 0.9rem;
+}
+
+/* My tickets */
+.ClaimPanel_ticketList__USzvD {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ClaimPanel_ticket__Ie8mc {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem 0.8rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 0.6rem;
+}
+
+.ClaimPanel_ticketNum__R189v {
+  font-size: 0.75rem;
+  color: #6b7280;
+  min-width: 2rem;
+}
+
+.ClaimPanel_ticketBalls__2l7GK {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.ClaimPanel_tball__iUKS3 {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.3);
+  border: 1px solid rgba(167,139,250,0.4);
+  color: #c084fc;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prize table  */
+.ClaimPanel_table__S53vv {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.ClaimPanel_table__S53vv th {
+  color: #6b7280;
+  text-align: left;
+  padding: 0.3rem 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+}
+
+.ClaimPanel_table__S53vv td {
+  padding: 0.4rem 0.5rem;
+  color: #d1d5db;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.ClaimPanel_pct__AlYnP {
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+.ClaimPanel_note__pMBXa {
+  margin-top: 0.8rem;
+  font-size: 0.72rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/RoundHistory.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.RoundHistory_wrap__DOqCT {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+}
+
+.RoundHistory_title__jXxG2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  margin: 0 0 1rem;
+}
+
+.RoundHistory_empty__EPDw1 {
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.RoundHistory_card__u3UNX {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 0.8rem;
+}
+.RoundHistory_card__u3UNX:last-child { margin-bottom: 0; }
+
+.RoundHistory_cardHeader__n7yAw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.RoundHistory_roundLabel__80qdm {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+.RoundHistory_meta__ozEcv {
+  font-size: 0.73rem;
+  color: #6b7280;
+}
+
+/* Winning balls */
+.RoundHistory_balls__3K8eq {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.RoundHistory_ball__T_c_0 {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+/* Winners list */
+.RoundHistory_winners__P8IWR {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.RoundHistory_winner__RjCh0 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 0.5rem;
+  font-size: 0.78rem;
+}
+
+.RoundHistory_winnerAddr__3Zl4k {
+  font-family: monospace;
+  color: #d1d5db;
+}
+
+.RoundHistory_winnerMatches__DDLnP {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.RoundHistory_winnerPrize__YB8Am {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.RoundHistory_noWinners__EezUf {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.RoundHistory_more__xP_aB {
+  font-size: 0.72rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.RoundHistory_carry__GIsy8 {
+  font-size: 0.72rem;
+  color: #fbbf24;
+  margin-top: 0.3rem;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/AdminPanel.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.AdminPanel_wrap__2hN6c {
+  background: rgba(251,191,36,0.05);
+  border: 1px solid rgba(251,191,36,0.2);
+  border-radius: 1rem;
+  padding: 1.2rem;
+}
+
+.AdminPanel_badge__4jsT9 {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fbbf24;
+  background: rgba(251,191,36,0.12);
+  border: 1px solid rgba(251,191,36,0.25);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.AdminPanel_row___j50S {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.AdminPanel_label__nK8OC {
+  font-size: 0.73rem;
+  color: #9ca3af;
+  margin-bottom: 0.2rem;
+}
+
+.AdminPanel_value__T_eoM {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+
+.AdminPanel_btn__jTVfp {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(251,191,36,0.35);
+  border-radius: 0.6rem;
+  background: rgba(251,191,36,0.12);
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.AdminPanel_btn__jTVfp:hover:not(:disabled) { background: rgba(251,191,36,0.22); }
+.AdminPanel_btn__jTVfp:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.AdminPanel_note__Dsr0E {
+  font-size: 0.72rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/LotteryApp.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+.LotteryApp_page__N4sya {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.LotteryApp_main__2algF {
+  flex: 1 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Hero (no wallet)*/
+.LotteryApp_hero__WRvYE {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  gap: 1.4rem;
+}
+
+.LotteryApp_heroBalls__rsOP4 {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.LotteryApp_heroBall__TDwy8 {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6d28d9, #a855f7);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  animation: LotteryApp_float__qIebu 3s ease-in-out infinite;
+}
+
+.LotteryApp_heroBall__TDwy8:nth-child(2n)   { animation-delay: 0.3s; }
+.LotteryApp_heroBall__TDwy8:nth-child(3n)   { animation-delay: 0.6s; }
+.LotteryApp_heroBall__TDwy8:nth-child(4n)   { animation-delay: 0.9s; }
+.LotteryApp_heroBall__TDwy8:nth-child(5n)   { animation-delay: 1.2s; }
+.LotteryApp_heroBall__TDwy8:nth-child(6n)   { animation-delay: 1.5s; }
+.LotteryApp_heroBall__TDwy8:nth-child(7n)   { animation-delay: 1.8s; }
+
+@keyframes LotteryApp_float__qIebu {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.LotteryApp_heroTitle__rkkuz {
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #c084fc, #f9a8d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.LotteryApp_heroSub__MikVT {
+  color: #9ca3af;
+  font-size: 1.05rem;
+  max-width: 480px;
+}
+
+.LotteryApp_heroConnect___Kcgw {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
+}
+.LotteryApp_heroConnect___Kcgw:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Hero timer */
+.LotteryApp_heroTimer__cqmby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(167,139,250,0.25);
+  border-radius: 1.2rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.LotteryApp_heroTimerLabel__py6U2 {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.LotteryApp_heroCountdown__9qnG3 {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.LotteryApp_heroTimeNum__6rdJd {
+  font-size: 3.2rem;
+  font-weight: 900;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.LotteryApp_heroColon__ijlxu {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+}
+
+.LotteryApp_heroTimerSub__Qejt0 {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Prize preview table*/
+.LotteryApp_prizePreview__zV9NB {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.6rem;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.LotteryApp_prizeRow__IDmho {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.7rem;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
+.LotteryApp_pct__J5MrD {
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+/*Wallet connected grid*/
+.LotteryApp_grid__M9NYg {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.LotteryApp_left__x16lj, .LotteryApp_right__MLuEJ {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/*Pending tx banner*/
+.LotteryApp_txBanner__YbdHx {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1rem;
+  background: rgba(167,139,250,0.08);
+  border: 1px solid rgba(167,139,250,0.2);
+  border-radius: 0.8rem;
+  color: #a78bfa;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.LotteryApp_txSpinner__84GM6 {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(167,139,250,0.25);
+  border-top-color: #a78bfa;
+  border-radius: 50%;
+  animation: LotteryApp_spin__v7lNz 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes LotteryApp_spin__v7lNz { to { transform: rotate(360deg); } }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .LotteryApp_grid__M9NYg {
+    grid-template-columns: 1fr;
+  }
+  .LotteryApp_heroTitle__rkkuz { font-size: 2rem; }
+  .LotteryApp_prizePreview__zV9NB { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .LotteryApp_main__2algF { padding: 1rem; }
+  .LotteryApp_heroBalls__rsOP4 { gap: 0.4rem; }
+  .LotteryApp_heroBall__TDwy8 { width: 2.3rem; height: 2.3rem; font-size: 0.75rem; }
+}
+
