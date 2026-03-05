@@ -275,7 +275,7 @@ contract DecentralizedLottery is VRFConsumerBaseV2Plus, ReentrancyGuard {
      */
     function fulfillRandomWords(
         uint256 requestId,
-        uint256[] memory randomWords
+        uint256[] calldata randomWords
     ) internal override {
         uint256 roundId = vrfRequestToRound[requestId];
         Round storage r = rounds[roundId];
@@ -576,7 +576,7 @@ contract DecentralizedLottery is VRFConsumerBaseV2Plus, ReentrancyGuard {
      *      Each of the 7 random words drives one independent selection step,
      *      making the combined output unbiased and unpredictable.
      */
-    function _pickSortedNumbers(uint256[] memory rng)
+    function _pickSortedNumbers(uint256[] calldata rng)
         internal pure returns (uint8[7] memory)
     {
         // Build candidate pool [1..49]
