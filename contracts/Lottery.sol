@@ -614,22 +614,26 @@ contract DecentralizedLottery is VRFConsumerBaseV2Plus, ReentrancyGuard {
         return picked;
     }
 
-    //  INTERNAL: COUNT MATCHES  (two-pointer, both arrays sorted)
+    //  INTERNAL: COUNT MATCHES  (positional prefix match)
 
     /**
-     * @dev Both arrays are guaranteed to be sorted ascending, so a single
-     *      O(n+m) two-pointer pass is correct and cheap.
+     * @dev Compares ticket numbers against winning numbers position-by-position.
+     *      Both arrays are sorted ascending. A match is only counted when
+     *      a[i] == b[i] AND all previous positions also matched (no position
+     *      may be skipped). The count is the length of the common prefix —
+     *      the first positional mismatch ends counting immediately.
+     *
+     *      Example: winning [1,2,3,4,5,6,7] vs ticket [1,2,3,4,5,10,15] → 5
+     *               winning [1,2,3,4,5,6,7] vs ticket [3,4,5,6,7,10,15] → 0
      */
     function _countMatches(
         uint8[7] memory a,
         uint8[7] memory b
     ) internal pure returns (uint8 matches) {
-        uint8 ai = 0;
-        uint8 bi = 0;
-        while (ai < 7 && bi < 7) {
-            if      (a[ai] == b[bi]) { ++matches; ++ai; ++bi; }
-            else if (a[ai]  < b[bi]) { ++ai; }
-            else                     { ++bi; }
+        for (uint8 i = 0; i < 7; ) {
+            if (a[i] != b[i]) break;
+            ++matches;
+            unchecked { ++i; }
         }
     }
 }
