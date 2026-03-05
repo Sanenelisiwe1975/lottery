@@ -66,6 +66,34 @@ export default function LotteryApp() {
             <p className={styles.heroSub}>
               Pick 7 numbers · Chainlink VRF draw every 5 minutes · Win up to 30% of the pool
             </p>
+
+            {/* Live round timer – visible before wallet connection */}
+            {round && (
+              <div className={styles.heroTimer}>
+                {round.drawRequested ? (
+                  <span className={styles.heroTimerLabel}>⏳ Drawing in progress…</span>
+                ) : (
+                  <>
+                    <span className={styles.heroTimerLabel}>
+                      Round #{round.roundId} · Next draw in
+                    </span>
+                    <div className={styles.heroCountdown}>
+                      <span className={styles.heroTimeNum}>
+                        {String(Math.floor((secsLeft || 0) / 60)).padStart(2, "0")}
+                      </span>
+                      <span className={styles.heroColon}>:</span>
+                      <span className={styles.heroTimeNum}>
+                        {String((secsLeft || 0) % 60).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <span className={styles.heroTimerSub}>
+                      Prize pool: {round.prizePool} ETH · {round.totalTickets} tickets
+                    </span>
+                  </>
+                )}
+              </div>
+            )}
+
             <button className={styles.heroConnect} onClick={connectWallet}>
               Connect Wallet to Play
             </button>
