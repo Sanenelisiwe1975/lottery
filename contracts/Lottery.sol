@@ -245,12 +245,17 @@ contract DecentralizedLottery is VRFConsumerBaseV2Plus, ReentrancyGuard {
             emit RoundFinalized(roundId, r.prizePool);
         } else {
             // ── Request Chainlink VRF ──
-            uint256 reqId = i_vrfCoordinator.requestRandomWords(
-                i_gasLane,
-                i_subscriptionId,
-                REQUEST_CONFIRMATIONS,
-                CALLBACK_GAS_LIMIT,
-                NUM_WORDS
+            uint256 reqId = s_vrfCoordinator.requestRandomWords(
+                VRFV2PlusClient.RandomWordsRequest({
+                    keyHash:             i_gasLane,
+                    subId:               i_subscriptionId,
+                    requestConfirmations: REQUEST_CONFIRMATIONS,
+                    callbackGasLimit:    CALLBACK_GAS_LIMIT,
+                    numWords:            NUM_WORDS,
+                    extraArgs:           VRFV2PlusClient._argsToBytes(
+                        VRFV2PlusClient.ExtraArgsV1({ nativePayment: false })
+                    )
+                })
             );
             vrfRequestToRound[reqId] = roundId;
             emit DrawRequested(roundId, reqId);
