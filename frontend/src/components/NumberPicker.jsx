@@ -23,8 +23,7 @@ export default function NumberPicker({ onBuy, pendingTx, disabled }) {
   const clear = () => setSelected(new Set());
 
   const handleBuy = () => {
-    const sorted = [...selected].sort((a, b) => a - b);
-    onBuy(sorted);
+    onBuy([...selected]);
     setSelected(new Set());
   };
 
@@ -61,7 +60,7 @@ export default function NumberPicker({ onBuy, pendingTx, disabled }) {
         <div className={styles.selection}>
           <span className={styles.selLabel}>Your numbers:</span>
           <div className={styles.selBalls}>
-            {[...selected].sort((a, b) => a - b).map((n) => (
+            {[...selected].map((n) => (
               <span key={n} className={styles.selBall}>{n}</span>
             ))}
           </div>

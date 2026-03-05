@@ -559,11 +559,18 @@ contract DecentralizedLottery is VRFConsumerBaseV2Plus, ReentrancyGuard {
 
     //  INTERNAL: VALIDATE TICKET NUMBERS
 
+    /**
+     * @dev Numbers may be submitted in any order the player chooses.
+     *      Each must be in [1, 49] and all 7 must be distinct.
+     *      Uniqueness is checked with a uint64 bitmask (bit i = number i).
+     */
     function _validateNumbers(uint8[7] calldata n) internal pure {
-        require(n[0] >= 1 && n[0] <= MAX_BALL, "Number out of range [1,49]");
-        for (uint8 i = 1; i < BALLS; ) {
-            require(n[i] > n[i - 1],    "Numbers must be strictly ascending");
-            require(n[i] <= MAX_BALL,   "Number out of range [1,49]");
+        uint64 seen = 0;
+        for (uint8 i = 0; i < BALLS; ) {
+            require(n[i] >= 1 && n[i] <= MAX_BALL, "Number out of range [1,49]");
+            uint64 bit = uint64(1) << n[i];
+            require(seen & bit == 0, "Duplicate numbers not allowed");
+            seen |= bit;
             unchecked { ++i; }
         }
     }
