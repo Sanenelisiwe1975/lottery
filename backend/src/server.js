@@ -119,7 +119,11 @@ setInterval(async () => {
     const { contract } = get();
     if (!contract) return;
     const secs = await contract.secondsUntilDraw();
-    broadcast({ type: "round:tick", secsLeft: Number(secs) });
+    const s = Number(secs);
+    const mm = String(Math.floor(s / 60)).padStart(2, "0");
+    const ss = String(s % 60).padStart(2, "0");
+    process.stdout.write(`\r[timer] Round closes in ${mm}:${ss}   `);
+    broadcast({ type: "round:tick", secsLeft: s });
   } catch { /* ignore during reconnect */ }
 }, 1_000);
 
