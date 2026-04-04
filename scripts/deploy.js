@@ -16,7 +16,6 @@
 const { ethers, network } = require("hardhat");
 require("dotenv").config();
 
-//Chainlink VRF parameters per network
 const VRF_CONFIG = {
   sepolia: {
     coordinator: "0x9DdfaCa8183c41ad55329BdeeD9F6A8d53168B1B",
@@ -26,7 +25,7 @@ const VRF_CONFIG = {
     coordinator: "0xAE975071Be8F8eE67addBC1A82488F1C24858067",
     keyHash:     "0x6e099d640cde6de9d40ac749b4b594126b0169747122711109c9985d47751f93",
   },
-  // For local hardhat testing we deploy a mock coordinator (see test/).
+  
   hardhat: {
     coordinator: null,
     keyHash:     "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c",

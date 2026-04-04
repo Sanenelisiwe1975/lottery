@@ -1,13 +1,7 @@
 "use client";
-import { NETWORK_NAMES } from "../constants";
 import styles from "./Header.module.css";
 
-export default function Header({ wallet, onConnect, onDisconnect }) {
-  const networkName = wallet ? (NETWORK_NAMES[wallet.chainId] ?? `Chain ${wallet.chainId}`) : null;
-  const shortAddr   = wallet
-    ? `${wallet.address.slice(0, 6)}…${wallet.address.slice(-4)}`
-    : null;
-
+export default function Header({ user, onLogout, onAddCredits, onMobileMoney }) {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -16,18 +10,23 @@ export default function Header({ wallet, onConnect, onDisconnect }) {
       </div>
 
       <div className={styles.walletArea}>
-        {wallet ? (
+        {user ? (
           <>
-            <span className={styles.network}>{networkName}</span>
-            <button className={styles.addrBtn} onClick={onDisconnect} title="Click to disconnect">
-              {shortAddr}
+            <span className={styles.credits}>
+              🎟 {user.credits ?? 0} {user.credits === 1 ? "credit" : "credits"}
+            </span>
+            <button className={styles.addBtn} onClick={onAddCredits}>
+              + Card
+            </button>
+            <button className={styles.mmBtn} onClick={onMobileMoney}>
+              📱 Mobile Money
+            </button>
+            <span className={styles.email}>{user.email}</span>
+            <button className={styles.logoutBtn} onClick={onLogout}>
+              Log Out
             </button>
           </>
-        ) : (
-          <button className={styles.connectBtn} onClick={onConnect}>
-            Connect Wallet
-          </button>
-        )}
+        ) : null}
       </div>
     </header>
   );

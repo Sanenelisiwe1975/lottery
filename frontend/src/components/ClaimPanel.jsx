@@ -14,13 +14,18 @@ export default function ClaimPanel({ myPrize, myTickets, onClaim, pendingTx }) {
           {myPrize} ETH
         </div>
         {hasPrize && (
-          <button
-            className={styles.claimBtn}
-            onClick={onClaim}
-            disabled={!!pendingTx}
-          >
-            {pendingTx === "Claim Prize" ? "⏳ Claiming…" : "💰 Claim Prize"}
-          </button>
+          <>
+            <p style={{ fontSize: "0.78rem", color: "#9ca3af", margin: "0.4rem 0 0", textAlign: "center" }}>
+              Claiming converts your ETH prize to ticket credits.
+            </p>
+            <button
+              className={styles.claimBtn}
+              onClick={onClaim}
+              disabled={!!pendingTx}
+            >
+              {pendingTx === "Claim Prize" ? "⏳ Claiming…" : "💰 Claim Prize → Credits"}
+            </button>
+          </>
         )}
       </div>
 

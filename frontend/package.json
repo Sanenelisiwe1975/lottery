@@ -1,21 +1,23 @@
 {
-  "name": "lottery-dapp",
+  "name": "lottery-dapp-frontend",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev":   "next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint":  "next lint"
+    "lint": "next lint"
   },
   "dependencies": {
-    "ethers":    "^6.13.0",
-    "next":      "14.2.5",
-    "react":     "^18.3.0",
+    "@stripe/react-stripe-js": "^5.6.1",
+    "@stripe/stripe-js": "^8.9.0",
+    "ethers": "^6.13.0",
+    "next": "14.2.5",
+    "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
-    "eslint":            "^8",
+    "eslint": "^8",
     "eslint-config-next": "14.2.5"
   }
 }

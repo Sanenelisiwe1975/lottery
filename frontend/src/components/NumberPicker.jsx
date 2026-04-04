@@ -5,7 +5,7 @@ import styles from "./NumberPicker.module.css";
 const REQUIRED = 7;
 const MAX = 49;
 
-export default function NumberPicker({ onBuy, pendingTx, disabled }) {
+export default function NumberPicker({ onBuy, pendingTx, disabled, credits = 0 }) {
   const [selected, setSelected] = useState(new Set());
 
   const toggle = (n) => {
@@ -27,7 +27,8 @@ export default function NumberPicker({ onBuy, pendingTx, disabled }) {
     setSelected(new Set());
   };
 
-  const ready = selected.size === REQUIRED;
+  const ready      = selected.size === REQUIRED;
+  const noCredits  = credits < 1;
 
   return (
     <div className={styles.wrap}>
@@ -71,12 +72,17 @@ export default function NumberPicker({ onBuy, pendingTx, disabled }) {
         <button className={styles.clearBtn} onClick={clear} disabled={selected.size === 0 || disabled}>
           Clear
         </button>
+        {noCredits && (
+          <p style={{ fontSize: "0.82rem", color: "#f9a8d4", margin: 0, textAlign: "center" }}>
+            You have no credits. Add credits to buy a ticket.
+          </p>
+        )}
         <button
           className={styles.buyBtn}
           onClick={handleBuy}
-          disabled={!ready || !!pendingTx || disabled}
+          disabled={!ready || !!pendingTx || disabled || noCredits}
         >
-          {pendingTx === "Buy Ticket" ? "⏳ Buying…" : "🎟 Buy Ticket — 0.01 ETH"}
+          {pendingTx === "Buy Ticket" ? "⏳ Buying…" : "🎟 Buy Ticket — 1 Credit"}
         </button>
       </div>
     </div>

@@ -1,0 +1,211 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.card {
+  position: relative;
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.closeBtn:hover { color: #fff; }
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.sub {
+  color: #9ca3af;
+  font-size: 0.88rem;
+  margin: -0.6rem 0 0;
+}
+
+.rate {
+  font-size: 0.82rem;
+  color: #34d399;
+  font-weight: 600;
+  margin: -0.8rem 0 0;
+}
+
+.presets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+.preset {
+  padding: 0.7rem 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.7rem;
+  color: #d1d5db;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  line-height: 1.4;
+}
+.preset:hover {
+  border-color: rgba(192, 132, 252, 0.4);
+  color: #c084fc;
+}
+.activePreset {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: #a855f7;
+  color: #c084fc;
+}
+.presetSub {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.input {
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6rem;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  outline: none;
+}
+.input:focus { border-color: rgba(192, 132, 252, 0.5); }
+
+.error {
+  color: #fca5a5;
+  font-size: 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+}
+
+.payBtn {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 0.7rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.payBtn:hover:not(:disabled) { opacity: 0.85; }
+.payBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Card step */
+.cardStep { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.intentInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.intentAmount { color: #34d399; }
+.intentArrow  { color: #6b7280; }
+.intentCredits { color: #c084fc; }
+
+.paymentElement {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+.stripeNotice {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+.stripeNotice p { margin: 0 0 0.5rem; }
+.stripeNotice code { color: #c084fc; font-size: 0.78rem; }
+
+.secret {
+  display: block;
+  font-size: 0.7rem;
+  word-break: break-all;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.backBtn {
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.7rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.backBtn:hover { color: #fff; }
+
+/* Done step */
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.doneIcon {
+  font-size: 3rem;
+  color: #34d399;
+}
+.done p {
+  color: #d1d5db;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "decentralized-lottery",
+  "name": "lottery-dapp",
   "version": "1.0.0",
-  "description": "Provably fair 7-ball lottery using Chainlink VRF",
+  "description": "LotteryDApp — provably fair 7-ball lottery using Chainlink VRF",
   "scripts": {
     "compile":     "npx hardhat compile",
     "test":        "npx hardhat test",

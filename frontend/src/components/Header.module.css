@@ -72,3 +72,64 @@
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
+
+.credits {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f9a8d4;
+  padding: 0.3rem 0.8rem;
+  background: rgba(249, 168, 212, 0.1);
+  border: 1px solid rgba(249, 168, 212, 0.25);
+  border-radius: 999px;
+}
+
+.addBtn {
+  padding: 0.45rem 1rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.addBtn:hover { opacity: 0.85; }
+
+.mmBtn {
+  padding: 0.45rem 1rem;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.mmBtn:hover { opacity: 0.85; }
+
+.email {
+  font-size: 0.82rem;
+  color: #9ca3af;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logoutBtn {
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #9ca3af;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}

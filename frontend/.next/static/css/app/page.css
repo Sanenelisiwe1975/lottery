@@ -78,6 +78,591 @@
   color: #fff;
 }
 
+.Header_credits__dMFMl {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f9a8d4;
+  padding: 0.3rem 0.8rem;
+  background: rgba(249, 168, 212, 0.1);
+  border: 1px solid rgba(249, 168, 212, 0.25);
+  border-radius: 999px;
+}
+
+.Header_addBtn__X62I4 {
+  padding: 0.45rem 1rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.Header_addBtn__X62I4:hover { opacity: 0.85; }
+
+.Header_mmBtn__VzlyP {
+  padding: 0.45rem 1rem;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.Header_mmBtn__VzlyP:hover { opacity: 0.85; }
+
+.Header_email__xgEsW {
+  font-size: 0.82rem;
+  color: #9ca3af;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Header_logoutBtn__0mHyf {
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #9ca3af;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.Header_logoutBtn__0mHyf:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/AuthModal.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.AuthModal_overlay__Gb7QK {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.AuthModal_card__kOBb2 {
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.AuthModal_logo__5Ij42 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #c084fc, #f9a8d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.AuthModal_tabs___3g7Q {
+  display: flex;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.AuthModal_tab__kriyO {
+  flex: 1 1;
+  padding: 0.55rem;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.AuthModal_activeTab__HOPv2 {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+}
+
+.AuthModal_form__G3zCB {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.AuthModal_label__pFSU7 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.AuthModal_input__EFFPy {
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6rem;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.AuthModal_input__EFFPy:focus {
+  border-color: rgba(192, 132, 252, 0.5);
+}
+.AuthModal_input__EFFPy::placeholder { color: #6b7280; }
+
+.AuthModal_error__BhB4_ {
+  color: #fca5a5;
+  font-size: 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+}
+
+.AuthModal_submit__zS6vv {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 0.7rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 0.3rem;
+}
+.AuthModal_submit__zS6vv:hover:not(:disabled) { opacity: 0.85; }
+.AuthModal_submit__zS6vv:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.AuthModal_note__4FuIH {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/BuyCreditsModal.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.BuyCreditsModal_overlay__A4YMe {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.BuyCreditsModal_card___GtYq {
+  position: relative;
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.BuyCreditsModal_closeBtn__5ILBf {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.BuyCreditsModal_closeBtn__5ILBf:hover { color: #fff; }
+
+.BuyCreditsModal_title__jTIBn {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.BuyCreditsModal_sub__gZymQ {
+  color: #9ca3af;
+  font-size: 0.88rem;
+  margin: -0.6rem 0 0;
+}
+
+.BuyCreditsModal_rate__MYVTn {
+  font-size: 0.82rem;
+  color: #34d399;
+  font-weight: 600;
+  margin: -0.8rem 0 0;
+}
+
+.BuyCreditsModal_presets__t3uo6 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.6rem;
+  gap: 0.6rem;
+}
+
+.BuyCreditsModal_preset__sEaq1 {
+  padding: 0.7rem 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.7rem;
+  color: #d1d5db;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  line-height: 1.4;
+}
+.BuyCreditsModal_preset__sEaq1:hover {
+  border-color: rgba(192, 132, 252, 0.4);
+  color: #c084fc;
+}
+.BuyCreditsModal_activePreset__Zxnd8 {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: #a855f7;
+  color: #c084fc;
+}
+.BuyCreditsModal_presetSub__lueah {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.BuyCreditsModal_label__qr90G {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.BuyCreditsModal_input__LUKut {
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6rem;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  outline: none;
+}
+.BuyCreditsModal_input__LUKut:focus { border-color: rgba(192, 132, 252, 0.5); }
+
+.BuyCreditsModal_error__cVXAK {
+  color: #fca5a5;
+  font-size: 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+}
+
+.BuyCreditsModal_payBtn__xRj27 {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 0.7rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.BuyCreditsModal_payBtn__xRj27:hover:not(:disabled) { opacity: 0.85; }
+.BuyCreditsModal_payBtn__xRj27:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Card step */
+.BuyCreditsModal_cardStep__a6ADq { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.BuyCreditsModal_intentInfo___qKQE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.BuyCreditsModal_intentAmount__dPevt { color: #34d399; }
+.BuyCreditsModal_intentArrow__8WIxe  { color: #6b7280; }
+.BuyCreditsModal_intentCredits__rseqo { color: #c084fc; }
+
+.BuyCreditsModal_paymentElement__XLAlS {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+.BuyCreditsModal_stripeNotice__p27vA {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+.BuyCreditsModal_stripeNotice__p27vA p { margin: 0 0 0.5rem; }
+.BuyCreditsModal_stripeNotice__p27vA code { color: #c084fc; font-size: 0.78rem; }
+
+.BuyCreditsModal_secret__bjnWw {
+  display: block;
+  font-size: 0.7rem;
+  word-break: break-all;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.BuyCreditsModal_actions__zFou6 {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.BuyCreditsModal_backBtn__IFWOQ {
+  padding: 0.8rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.7rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.BuyCreditsModal_backBtn__IFWOQ:hover { color: #fff; }
+
+/* Done step */
+.BuyCreditsModal_done__gheeR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.BuyCreditsModal_doneIcon__c24Zu {
+  font-size: 3rem;
+  color: #34d399;
+}
+.BuyCreditsModal_done__gheeR p {
+  color: #d1d5db;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/MobileMoneyModal.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.MobileMoneyModal_overlay__YvznR {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.MobileMoneyModal_card__LMHg9 {
+  position: relative;
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.MobileMoneyModal_closeBtn__4BWe2 {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.MobileMoneyModal_closeBtn__4BWe2:hover { color: #fff; }
+
+.MobileMoneyModal_title__CxLZm {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.MobileMoneyModal_sub__kiSh8 {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin: -0.4rem 0 0;
+}
+
+.MobileMoneyModal_flags__zlj0i {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+}
+
+.MobileMoneyModal_flagBtn__50Jai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.55rem 0.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.6rem;
+  color: #9ca3af;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.MobileMoneyModal_flagBtn__50Jai span:first-child { font-size: 1.2rem; }
+.MobileMoneyModal_flagBtn__50Jai:hover { border-color: rgba(192, 132, 252, 0.3); color: #c084fc; }
+.MobileMoneyModal_activeFlagBtn__Tejjn {
+  background: rgba(124, 58, 237, 0.15);
+  border-color: #a855f7;
+  color: #c084fc;
+}
+
+.MobileMoneyModal_presets__612lw {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.6rem;
+  gap: 0.6rem;
+}
+
+.MobileMoneyModal_preset___iohx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.7rem 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.7rem;
+  color: #d1d5db;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.MobileMoneyModal_preset___iohx:hover { border-color: rgba(192, 132, 252, 0.4); color: #c084fc; }
+.MobileMoneyModal_activePreset__noMWr {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: #a855f7;
+  color: #c084fc;
+}
+.MobileMoneyModal_presetSub__L2KX0 {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.MobileMoneyModal_label__EbCTp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  color: #9ca3af;
+}
+
+.MobileMoneyModal_input__NfOdu {
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6rem;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  outline: none;
+}
+.MobileMoneyModal_input__NfOdu:focus { border-color: rgba(192, 132, 252, 0.5); }
+
+.MobileMoneyModal_rate__nIPVc {
+  font-size: 0.82rem;
+  color: #34d399;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.45rem;
+}
+
+.MobileMoneyModal_error__igwtI {
+  color: #fca5a5;
+  font-size: 0.85rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0;
+}
+
+.MobileMoneyModal_payBtn__AclOe {
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  border: none;
+  border-radius: 0.7rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.MobileMoneyModal_payBtn__AclOe:hover:not(:disabled) { opacity: 0.85; }
+.MobileMoneyModal_payBtn__AclOe:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.MobileMoneyModal_note__2DLbK {
+  text-align: center;
+  font-size: 0.76rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/RoundCard.module.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
@@ -702,72 +1287,6 @@
   font-size: 0.72rem;
   color: #fbbf24;
   margin-top: 0.3rem;
-}
-
-/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/AdminPanel.module.css ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************/
-.AdminPanel_wrap__2hN6c {
-  background: rgba(251,191,36,0.05);
-  border: 1px solid rgba(251,191,36,0.2);
-  border-radius: 1rem;
-  padding: 1.2rem;
-}
-
-.AdminPanel_badge__4jsT9 {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #fbbf24;
-  background: rgba(251,191,36,0.12);
-  border: 1px solid rgba(251,191,36,0.25);
-  border-radius: 999px;
-  padding: 0.2rem 0.7rem;
-  margin-bottom: 0.9rem;
-}
-
-.AdminPanel_row___j50S {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
-.AdminPanel_label__nK8OC {
-  font-size: 0.73rem;
-  color: #9ca3af;
-  margin-bottom: 0.2rem;
-}
-
-.AdminPanel_value__T_eoM {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: #fbbf24;
-}
-
-.AdminPanel_btn__jTVfp {
-  padding: 0.6rem 1.2rem;
-  border: 1px solid rgba(251,191,36,0.35);
-  border-radius: 0.6rem;
-  background: rgba(251,191,36,0.12);
-  color: #fbbf24;
-  font-weight: 700;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background 0.15s;
-  white-space: nowrap;
-}
-.AdminPanel_btn__jTVfp:hover:not(:disabled) { background: rgba(251,191,36,0.22); }
-.AdminPanel_btn__jTVfp:disabled { opacity: 0.4; cursor: not-allowed; }
-
-.AdminPanel_note__Dsr0E {
-  font-size: 0.72rem;
-  color: #6b7280;
-  line-height: 1.6;
-  margin: 0;
 }
 
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\

@@ -12,14 +12,25 @@ const db               = require("./db");
 const Keeper           = require("./keeper");
 const roundsRouter     = require("./routes/rounds");
 const playersRouter    = require("./routes/players");
+const authRouter       = require("./routes/auth");
+const paymentsRouter       = require("./routes/payments");
+const mobilePaymentsRouter = require("./routes/mobilePayments");
+const ticketsRouter        = require("./routes/tickets");
+const prizesRouter         = require("./routes/prizes");
 
 //Express app
 const app = express();
 
 app.use(cors({
   origin: (process.env.FRONTEND_URL || "http://localhost:3000").split(","),
-  methods: ["GET"],
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
+
+// Stripe webhook must receive the raw body for signature verification.
+// Mount it BEFORE express.json() so the body is not pre-parsed.
+app.use("/api/payments/webhook", express.raw({ type: "application/json" }));
+
 app.use(express.json());
 
 // REST Routes
@@ -29,6 +40,21 @@ app.use("/api/rounds",  roundsRouter);
 
 // /api/players/:address/wins  + /api/players/:address/tickets
 app.use("/api/players", playersRouter);
+
+// /api/auth/register  + /api/auth/login  + /api/auth/me
+app.use("/api/auth", authRouter);
+
+// /api/payments/create-intent  + /api/payments/webhook  + /api/payments/history
+app.use("/api/payments", paymentsRouter);
+
+// /api/mobile-payments/initiate  + /api/mobile-payments/webhook  + /api/mobile-payments/verify/:ref
+app.use("/api/mobile-payments", mobilePaymentsRouter);
+
+// /api/tickets/buy  + /api/tickets/mine
+app.use("/api/tickets", ticketsRouter);
+
+// /api/prizes/pending  + /api/prizes/history  + /api/prizes/claim
+app.use("/api/prizes", prizesRouter);
 
 // GET /api/stats
 app.get("/api/stats", (req, res) => {

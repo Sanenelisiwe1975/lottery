@@ -59,6 +59,35 @@ db.exec(`
     key   TEXT PRIMARY KEY,
     value TEXT
   );
+
+  -- ── Hybrid Web2 tables ────────────────────────────────────────────────────
+
+  CREATE TABLE IF NOT EXISTS users (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    email         TEXT    UNIQUE NOT NULL,
+    password_hash TEXT    NOT NULL,
+    created_at    INTEGER NOT NULL DEFAULT (unixepoch())
+  );
+
+  CREATE TABLE IF NOT EXISTS wallets (
+    user_id       INTEGER PRIMARY KEY REFERENCES users(id),
+    address       TEXT    NOT NULL UNIQUE,
+    encrypted_key TEXT    NOT NULL   -- AES-256-GCM encrypted private key
+  );
+
+  CREATE TABLE IF NOT EXISTS balances (
+    user_id INTEGER PRIMARY KEY REFERENCES users(id),
+    credits REAL    NOT NULL DEFAULT 0   -- ticket credits (1 credit = 1 ticket)
+  );
+
+  CREATE TABLE IF NOT EXISTS payments (
+    id                 INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id            INTEGER NOT NULL REFERENCES users(id),
+    stripe_payment_id  TEXT    NOT NULL UNIQUE,
+    amount_usd         REAL    NOT NULL,
+    credits_added      REAL    NOT NULL,
+    created_at         INTEGER NOT NULL DEFAULT (unixepoch())
+  );
 `);
 
 // ─── Prepared statements ─────────────────────────────────────────────────────
@@ -172,6 +201,44 @@ const stmts = {
   // meta
   getMeta: db.prepare(`SELECT value FROM meta WHERE key = ?`),
   setMeta: db.prepare(`INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)`),
+
+  // ── Hybrid Web2 statements ─────────────────────────────────────────────────
+
+  // users
+  createUser: db.prepare(`
+    INSERT INTO users (email, password_hash) VALUES (@email, @passwordHash)
+  `),
+  getUserByEmail: db.prepare(`SELECT * FROM users WHERE email = ?`),
+  getUserById:    db.prepare(`SELECT * FROM users WHERE id = ?`),
+
+  // wallets
+  createWallet: db.prepare(`
+    INSERT INTO wallets (user_id, address, encrypted_key)
+    VALUES (@userId, @address, @encryptedKey)
+  `),
+  getWallet: db.prepare(`SELECT * FROM wallets WHERE user_id = ?`),
+
+  // balances
+  initBalance: db.prepare(`
+    INSERT OR IGNORE INTO balances (user_id) VALUES (?)
+  `),
+  getBalance: db.prepare(`SELECT credits FROM balances WHERE user_id = ?`),
+  addCredits: db.prepare(`
+    UPDATE balances SET credits = credits + @amount WHERE user_id = @userId
+  `),
+  deductCredit: db.prepare(`
+    UPDATE balances SET credits = credits - 1 WHERE user_id = ? AND credits >= 1
+  `),
+
+  // payments
+  insertPayment: db.prepare(`
+    INSERT INTO payments (user_id, stripe_payment_id, amount_usd, credits_added)
+    VALUES (@userId, @stripePaymentId, @amountUsd, @creditsAdded)
+  `),
+  getPaymentsByUser: db.prepare(`
+    SELECT * FROM payments WHERE user_id = ? ORDER BY created_at DESC LIMIT ? OFFSET ?
+  `),
+  paymentExists: db.prepare(`SELECT id FROM payments WHERE stripe_payment_id = ?`),
 };
 
 // Public API
@@ -215,6 +282,30 @@ module.exports = {
   // meta
   getMeta: (key) => stmts.getMeta.get(key)?.value,
   setMeta: (key, value) => stmts.setMeta.run(key, String(value)),
+
+  // ── Hybrid Web2 ───────────────────────────────────────────────────────────
+
+  // users
+  createUser:     (email, passwordHash) => stmts.createUser.run({ email, passwordHash }),
+  getUserByEmail: (email) => stmts.getUserByEmail.get(email),
+  getUserById:    (id) => stmts.getUserById.get(id),
+
+  // wallets
+  createWallet: (userId, address, encryptedKey) =>
+    stmts.createWallet.run({ userId, address, encryptedKey }),
+  getWallet: (userId) => stmts.getWallet.get(userId),
+
+  // balances
+  initBalance:  (userId) => stmts.initBalance.run(userId),
+  getBalance:   (userId) => stmts.getBalance.get(userId)?.credits ?? 0,
+  addCredits:   (userId, amount) => stmts.addCredits.run({ userId, amount }),
+  deductCredit: (userId) => stmts.deductCredit.run(userId),
+
+  // payments
+  insertPayment:     (o) => stmts.insertPayment.run(o),
+  getPaymentsByUser: (userId, limit = 20, offset = 0) =>
+    stmts.getPaymentsByUser.all(userId, limit, offset),
+  paymentExists: (stripePaymentId) => !!stmts.paymentExists.get(stripePaymentId),
 
   // Raw db for transactions
   db,
